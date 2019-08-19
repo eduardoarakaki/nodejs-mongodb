@@ -2,9 +2,8 @@
 var mongo = require('mongodb');
 
 var connMongoDB = function(){
-	console.log('Entrou na função de conexão');
 	var db = new mongo.Db(
-		'got',
+		'db',
 		new mongo.Server(
 			'localhost', //string contendo o endereço do servidor
 			27017, //porta de conexão
@@ -12,7 +11,6 @@ var connMongoDB = function(){
 		),
 		{}
 	);
-
 	return db;
 }
 
